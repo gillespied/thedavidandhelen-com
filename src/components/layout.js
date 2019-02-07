@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.scss"
+import Footer from "./footer";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -21,11 +22,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div id="MainBodyDavid">
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer siteTitle={data.site.siteMetadata.title} />
         </div>
       </>
     )}
