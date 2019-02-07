@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, navigateTo } from "gatsby";
 //import PropTypes from "prop-types";
 //import { StaticQuery, graphql } from "gatsby";
 
 //TODO parametrise the left hand and right hand items.
-// left handside should unpack a list of links form gatsby, 
+// left hand side should unpack a list of links form gatsby, 
 class Navbar extends React.Component {
   
   // initialise a state variable
@@ -21,10 +21,10 @@ class Navbar extends React.Component {
   // render stuff
   render() {
     return (
-      <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-fixed-top container" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item"> 
-          <Link to="/">thedavidandhelen</Link>
+          <a className="navbar-item" onClick={() => navigateTo('/')}>
+          <p>D&H</p>
           </a>
           <a
             role="button"
@@ -43,14 +43,18 @@ class Navbar extends React.Component {
         <div id="navbarBasicExample" 
              className={`navbar-menu  ${this.state.showMenu ? " is-active": ""}`}  >
           <div className="navbar-start">
-            <a className="navbar-item">
-            <Link to='rsvp'>RSVP</Link>
+            <a className="navbar-item" onClick={() => navigateTo('/rsvp')}>
+            RSVP
+            </a>
+            <a className="navbar-item" onClick={() => navigateTo('/contact')}>
+            Contact
             </a>
 
-            <a class="navbar-item">
-            <Link to='/venues'>
-              Venues 
-            </Link> 
+            <a class="navbar-item" onClick={() => navigateTo('/venues')}>
+            Venues
+            </a>
+            <a class="navbar-item" onClick={() => navigateTo('/accommodation')}>
+            Accommodation
             </a>
           </div>
           <div class="navbar-end">

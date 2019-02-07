@@ -2,11 +2,13 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Footer = ({ siteTitle }) => (
+  <div className="container">
     <footer className="footer">
       <div className="has-text-centered">
         <p>{siteTitle} © {new Date().getFullYear()}</p>
-    </div>
+      </div>
     </footer>
+  </div>
 )
 
 Footer.propTypes = {

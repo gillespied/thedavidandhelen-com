@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
+import { Helmet } from "react-helmet"
+
 import Header from "./header"
 import "./layout.scss"
 import Footer from "./footer";
@@ -19,16 +21,14 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Helmet>
+          <html className="has-navbar-fixed-top" /> 
+        </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        
-        <div id="MainBodyDavid">
-          
-          <div className="container">
-            <main>{children}</main>
-          </div>
-
-            <Footer siteTitle={data.site.siteMetadata.title} />
+        <div className="container">
+          <main>{children}</main>
         </div>
+        <Footer siteTitle={data.site.siteMetadata.title} />
       </>
     )}
   />
