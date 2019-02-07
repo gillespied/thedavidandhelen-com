@@ -2,6 +2,8 @@
 
 Helen and I are getting married. I'm building this site to help with organising stuff like rsvp responses and givign people information on hotels etc.
 
+## Hosted on netlify
+
 ## Building the site
 
 You might not know me or Helen, so are probably more interested in how I built it. I started with the gatsby starter:
