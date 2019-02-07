@@ -2,10 +2,10 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Footer = ({ siteTitle }) => (
-    <footer>
-      {siteTitle} © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+    <footer className="footer">
+      <div className="has-text-centered">
+        <p>{siteTitle} © {new Date().getFullYear()}</p>
+    </div>
     </footer>
 )
 
