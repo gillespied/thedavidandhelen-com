@@ -44,10 +44,20 @@ export default class RSVP extends React.Component {
           <div className="columns">
             <div className="column is-one-half">
               <p style={{ paddingTop: `1rem`, paddingRight: `1rem` }}>
-                If you need to get in touch with us for any reason, other than
-                to RSVP, the use this form. Or, ring us if you have our number.
-                If you use the form though we can't forget what you told us. It
-                will also make the time I spent making the form pay-off.
+                Please fill in this form to confirm whether or not you can
+                attend. We promise not to spam your email or phone number if you
+                give them to us. We will use them only to update you if anything
+                changes.
+              </p>
+              <p>
+                Let us know if you have any dietary requirements and we will do
+                our best to make sure they are met.
+              </p>
+              <p>
+                If we invited your partner, or a guest, please fill in a
+                separate form for them. It's way harder to think through the
+                logic of adding more fields. We don't really need their number
+                and email though so feel free to leave it off.
               </p>
             </div>
             <div className="column">
@@ -116,44 +126,32 @@ export default class RSVP extends React.Component {
                   {/*  */}
                   <div className="field">
                     <div className="control">
-                      <label className="label" htmlFor={"radio"}>
-                        <input
-                         className="radio"
-                         type={"radio"}
-                         name={"attending-radio"}
-                         id={"attending-yes"}
-                         required={true}
-                         > 
-                         </input>
-                         Yes Button
-                      </label>
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="field">
-                    <label className="label" htmlFor={"attending"}>
-                      Yes
-                    </label>
-                    <div className="control">
-                      <input
-                        type="radio"
-                        name="react-tips"
-                        value="option1"
-                        checked={true}
-                        className="form-check-input"
-                      />
-                    </div>
-                    <label className="label" htmlFor={"attending"}>
-                      No
-                    </label>
-                    <input
-                      type="radio"
-                      name="react-tips"
-                      value="option2"
-                      checked={true}
-                      className="form-check-input"
-                    />
-                  </div>
+                      {/* first radio */}
+                      <label className="label">
+                      Attending
+                      </label>                  
+                        <label className="label" htmlFor={"attending"}>
+                          <input
+                            type="radio"
+                            name="attending"
+                            value="yes"
+                            checked={true}
+                            className="form-check-input"
+                          />
+                          &nbsp;Yes
+                        </label>
+                        <label className="label" htmlFor={"attending"}>
+                          <input
+                            type="radio"
+                            name="attending"
+                            value="no"
+                            checked={false}
+                            className="form-check-input"
+                          />
+                          &nbsp;No 
+                        </label>
+                    </div> {/* end of control */}
+                  </div> {/*  end of field*/}
                   {/*  */}
                   <div className="field">
                     <label className="label" htmlFor={"dietary"}>
