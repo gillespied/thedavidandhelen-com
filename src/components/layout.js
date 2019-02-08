@@ -22,11 +22,11 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet>
-          <html className="has-navbar-fixed-top" /> 
+          <body className="has-navbar-fixed-top" /> 
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="container">
-          <main>{children}</main>
+          <body>{children}</body>
         </div>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>

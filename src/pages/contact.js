@@ -1,65 +1,124 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { navigate } from "gatsby-link";
+import Layout from "../components/layout";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
-const ContactPage = () => (
-  <Layout>
-    <SEO title="Contact us" />
-    <form name="contact" method="POST" honeypot="bot-field" data-netlify="true" className="horizontal">
-      <fieldset>
-      <p class="hidden">
-        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-      </p>
-        {/* <!-- Form Name --> */}
-        <legend>contact-form</legend>
+export default class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isValidated: false };
+  }
 
-        {/* <!-- Text input--> */}
-        <div className="field">
-          <label className="label" for="name">Your Name:</label>
-          <div className="control">
-            <input id="name" name="name" type="text" className="input " required="">
-          </div>
-        </div>
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-        {/* <!-- Text input--> */}
-        <div className="field">
-          <label className="label" for="email">Your Email:</label>
-            <div className="control">
-              <input id="email" name="email" type="text" placeholder="Enter an email address" className="input " required="">
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error));
+  };
+
+  render() {
+    return (
+      <Layout>
+        <section style={{paddingTop: `3rem`, paddingBottom:`2rem`}} className="container">
+        <h1 className="title">
+                Contact us
+              </h1>
+          <div className="columns">
+            <div className="column is-one-half">
+              <p style={{paddingTop: `1rem`, paddingRight: `1rem`}}>
+                If you need to get in touch with us for any reason, other than to RSVP, the use this
+                form. Or, ring us if you have our number. If you use the form though we can't forget
+                what you told us. It will also make the time I spent making the form pay-off.
+              </p>
             </div>
-        </div>
-
-        {/* <!-- Text input--> */}
-        <div className="field">
-          <label className="label" for="phone-number">Your Phone Number</label>
-          <div className="control">
-            <input id="phone-number" name="phone-number" type="text" placeholder="Enter your number" className="input ">
+            <div className="column">
+              <div className="content is-one-half">
+                <form
+                  name="contact"
+                  method="post"
+                  action="/contact/thanks/"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={this.handleSubmit}
+                >
+                  {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div hidden>
+                    <label>
+                      Don’t fill this out:{" "}
+                      <input name="bot-field" onChange={this.handleChange} />
+                    </label>
+                  </div>
+                  <div className="field">
+                    <label className="label" htmlFor={"name"}>
+                      Your name
+                    </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type={"text"}
+                        name={"name"}
+                        onChange={this.handleChange}
+                        id={"name"}
+                        required={true}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label className="label" htmlFor={"email"}>
+                      Email
+                    </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type={"email"}
+                        name={"email"}
+                        onChange={this.handleChange}
+                        id={"email"}
+                        required={true}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label className="label" htmlFor={"message"}>
+                      Message
+                    </label>
+                    <div className="control">
+                      <textarea
+                        className="textarea"
+                        name={"message"}
+                        onChange={this.handleChange}
+                        id={"message"}
+                        required={true}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <a className="button is-primary is-medium">Send</a>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* <!-- Textarea --> */}
-        <div className="field">
-          <label className="label" for="dietary-requirements">Dietary requirements:</label>
-          <div className="control">
-            <textarea className="textarea" id="dietary-requirements" name="dietary-requirements">Enter your dietary preferences. We'll do our best to meet them. No promises you'll like everything though.</textarea>
-          </div>
-        </div>
-
-        {/* <!-- Button --> */}
-        <div className="field">
-          <label className="label" for="submit">RSVP</label>
-          <div className="control">
-            <button id="submit" name="submit" className="button is-primary">Submit</button>
-          </div>
-        </div>
-
-      </fieldset>
-    </form>
-
-
-  </Layout>
-)
-            
-export default ContactPage
+        </section>
+      </Layout>
+    );
+  }
+}
