@@ -21,7 +21,7 @@ class Navbar extends React.Component {
   // render stuff
   render() {
     return (
-      <nav className="navbar is-fixed-top container" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a className="navbar-item" onClick={() => navigateTo('/')}>
           <p>D&H</p>

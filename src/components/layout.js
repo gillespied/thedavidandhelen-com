@@ -25,9 +25,7 @@ const Layout = ({ children }) => (
           <body className="has-navbar-fixed-top" /> 
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="container">
           <body>{children}</body>
-        </div>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>
     )}
