@@ -145,7 +145,6 @@ export default class RSVP extends React.Component {
                             type="radio"
                             name="attending"
                             value="no"
-                            checked={false}
                             className="form-check-input"
                           />
                           &nbsp;No 
@@ -168,7 +167,7 @@ export default class RSVP extends React.Component {
                     </div>
                   </div>
                   <div className="field">
-                    <a className="button is-primary is-medium">Send</a>
+                    <a className="button is-primary is-medium" type="submit">Send</a>
                   </div>
                 </form>
               </div>
