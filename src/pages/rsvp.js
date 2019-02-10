@@ -132,19 +132,21 @@ export default class RSVP extends React.Component {
                       </label>                  
                         <label className="label" htmlFor={"attending"}>
                           <input
-                            type="radio"
-                            name="attending"
+                            type={"radio"}
+                            name={"attending"}
                             value="yes"
                             checked={true}
+                            onChange={this.handleChange}
                             className="form-check-input"
                           />
                           &nbsp;Yes
                         </label>
                         <label className="label" htmlFor={"attending"}>
                           <input
-                            type="radio"
-                            name="attending"
+                            type={"radio"}
+                            name={"attending"}
                             value="no"
+                            onChange={this.handleChange}
                             className="form-check-input"
                           />
                           &nbsp;No 
