@@ -111,7 +111,7 @@
                       </div>
                     </div>
                     <div className="field">
-                      <a className="button is-primary is-medium", type="submit">Send</a>
+                      <a className="button is-primary is-medium" type="submit">Send</a>
                     </div>
                   </form>
                 </div>
