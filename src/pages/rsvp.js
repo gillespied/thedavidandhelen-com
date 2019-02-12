@@ -95,11 +95,11 @@ export default class RSVP extends React.Component {
                     </div>
                   </div>
                   <div className="field">
-                    <a 
+                    <button 
                     className={`button ${!this.state.showGuest ? "is-primary": " is-danger"}`}
                     onClick={this.toggleGuest}
                     >
-                     {`${!this.state.showGuest ? "Add Guest": "Remove Guest"}`}</a>
+                     {`${!this.state.showGuest ? "Add Guest": "Remove Guest"}`}</button>
                   </div>
 
                   <div className={`field ${this.state.showGuest ? "": " is-hidden"}`}>
@@ -193,7 +193,7 @@ export default class RSVP extends React.Component {
                     </div>
                   </div>
                   <div className="field">
-                    <a className="button is-primary is-medium" type="submit">Send</a>
+                    <button className="button is-primary is-medium" type="submit">Send</button>
                   </div>
                 </form>
               </div>
