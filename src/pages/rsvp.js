@@ -43,11 +43,11 @@ export default class RSVP extends React.Component {
   render() {
     return (
       <Layout>
-        <section style={{ paddingTop: '3rem', paddingBottom: '2rem' }} className="container">
+        <section className="container maincontent">
           <h1 className="title">RSVP</h1>
           <div className="columns">
             <div className="column is-one-half">
-              <p style={{ paddingTop: '1rem', paddingRight: '1rem' }}>
+              <p>
                 Please fill in this form to confirm whether or not you can attend. We promise not to
                 spam your email or phone number if you give them to us. We will use them only to
                 update you if anything changes.

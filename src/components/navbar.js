@@ -20,7 +20,7 @@ class Navbar extends React.Component {
   // render stuff
   render() {
     return (
-      <nav className="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
             <a className="navbar-item" onClick={() => navigateTo('/')}>
