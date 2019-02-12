@@ -14,6 +14,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: `${__dirname}/src/images/favicon.png`,
+      },
+  },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

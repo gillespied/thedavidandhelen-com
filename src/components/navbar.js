@@ -4,9 +4,8 @@ import { Link, navigateTo } from "gatsby";
 //import { StaticQuery, graphql } from "gatsby";
 
 //TODO parametrise the left hand and right hand items.
-// left hand side should unpack a list of links form gatsby, 
+// left hand side should unpack a list of links form gatsby,
 class Navbar extends React.Component {
-  
   // initialise a state variable
   state = { showMenu: false };
 
@@ -16,59 +15,67 @@ class Navbar extends React.Component {
     this.setState({
       showMenu: !this.state.showMenu
     });
-  }; 
+  };
 
   // render stuff
   render() {
     return (
-      <nav className="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+      <nav
+        className="navbar is-fixed-top is-spaced"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="container">
-        <div className="navbar-brand">
-          <a className="navbar-item" onClick={() => navigateTo('/')}>
-          <p>D&H</p>
-          </a>
-          <a
-            role="button"
-            //className="navbar-burger burger"
-            className = {`navbar-burger burger  ${this.state.showMenu ? " is-active": ""}`}  
-            onClick={this.toggleMenu}
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
+          <div className="navbar-brand">
+            <a className="navbar-item" onClick={() => navigateTo("/")}>
+              <p>D&H</p>
+            </a>
+            <a
+              role="button"
+              //className="navbar-burger burger"
+              className={`navbar-burger burger  ${
+                this.state.showMenu ? " is-active" : ""
+              }`}
+              onClick={this.toggleMenu}
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </a>
+          </div>
+          <div
+            id="navbarBasicExample"
+            className={`navbar-menu  ${
+              this.state.showMenu ? " is-active" : ""
+            }`}
           >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </a>
-        </div>
-        <div id="navbarBasicExample" 
-             className={`navbar-menu  ${this.state.showMenu ? " is-active": ""}`}  >
-          <div className="navbar-start">
-            <a className="navbar-item" onClick={() => navigateTo('/rsvp')}>
-            RSVP
-            </a>
-            <a className="navbar-item" onClick={() => navigateTo('/contact')}>
-            Contact
-            </a>
+            <div className="navbar-start" />
+            <div className="navbar-end">
+              <a className="navbar-item" onClick={() => navigateTo("/rsvp")} >
+                RSVP
+              </a>
+              <a className="navbar-item" onClick={() => navigateTo("/contact")}>
+                Contact
+              </a>
 
-            <a class="navbar-item" onClick={() => navigateTo('/venues')}>
-            Venues
-            </a>
-            <a class="navbar-item" onClick={() => navigateTo('/accommodation')}>
-            Accommodation
-            </a>
+              <a className="navbar-item" onClick={() => navigateTo("/venues")}>
+                Venues
+              </a>
+              <a
+                className="navbar-item"
+                onClick={() => navigateTo("/accommodation")}
+              >
+                Accommodation
+              </a>
+            </div>
           </div>
-          <div class="navbar-end">
-            <a class="navbar-item" onClick={() => navigateTo('/accommodation')}>
-            Accommodation
-            </a>          
-          </div>
-        </div>
         </div>
       </nav>
-
     );
-  };
+  }
 }
 
 export default Navbar;
