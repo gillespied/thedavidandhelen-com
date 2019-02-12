@@ -60,19 +60,13 @@ export default class RSVP extends React.Component {
                 Let us know if you have any dietary requirements and we will do
                 our best to make sure they are met.
               </p>
-              <p>
-                If we invited your partner, or a guest, please fill in a
-                separate form for them. It's way harder to think through the
-                logic of adding more fields. We don't really need their number
-                and email though so feel free to leave it off.
-              </p>
             </div>
             <div className="column">
               <div className="content is-one-half">
                 <form
                   name="contact"
                   method="post"
-                  action="/thanks"
+                  action="/confirm-rsvp"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   onSubmit={this.handleSubmit}
@@ -102,15 +96,15 @@ export default class RSVP extends React.Component {
                   </div>
                   <div className="field">
                     <a 
-                    className="button is-primary"
+                    className={`button ${!this.state.showGuest ? "is-primary": " is-danger"}`}
                     onClick={this.toggleGuest}
                     >
-                     Add guest</a>
+                     {`${!this.state.showGuest ? "Add Guest": "Remove Guest"}`}</a>
                   </div>
 
                   <div className={`field ${this.state.showGuest ? "": " is-hidden"}`}>
                     <label className="label" htmlFor={"name-guest"}>
-                      Guest's name
+                      Their name
                     </label>
                     <div className="control">
                       <input
@@ -158,7 +152,7 @@ export default class RSVP extends React.Component {
                     <div className="control">
                       {/* first radio */}
                       <label className="label">
-                      Attending
+                      Attending?
                       </label>                  
                         <label className="label" htmlFor={"attending"}>
                           <input
