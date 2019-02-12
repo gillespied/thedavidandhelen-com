@@ -1,9 +1,9 @@
-import React from "react";
-import { Link, navigateTo } from "gatsby";
-//import PropTypes from "prop-types";
-//import { StaticQuery, graphql } from "gatsby";
+import React from 'react';
+import { Link, navigateTo } from 'gatsby';
+// import PropTypes from "prop-types";
+// import { StaticQuery, graphql } from "gatsby";
 
-//TODO parametrise the left hand and right hand items.
+// TODO parametrise the left hand and right hand items.
 // left hand side should unpack a list of links form gatsby,
 class Navbar extends React.Component {
   // initialise a state variable
@@ -13,29 +13,23 @@ class Navbar extends React.Component {
   // the state.
   toggleMenu = () => {
     this.setState({
-      showMenu: !this.state.showMenu
+      showMenu: !this.state.showMenu,
     });
   };
 
   // render stuff
   render() {
     return (
-      <nav
-        className="navbar is-fixed-top is-spaced"
-        role="navigation"
-        aria-label="main navigation"
-      >
+      <nav className="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
-            <a className="navbar-item" onClick={() => navigateTo("/")}>
+            <a className="navbar-item" onClick={() => navigateTo('/')}>
               <p>D&H</p>
             </a>
             <a
               role="button"
-              //className="navbar-burger burger"
-              className={`navbar-burger burger  ${
-                this.state.showMenu ? " is-active" : ""
-              }`}
+              // className="navbar-burger burger"
+              className={`navbar-burger burger  ${this.state.showMenu ? ' is-active' : ''}`}
               onClick={this.toggleMenu}
               aria-label="menu"
               aria-expanded="false"
@@ -48,26 +42,21 @@ class Navbar extends React.Component {
           </div>
           <div
             id="navbarBasicExample"
-            className={`navbar-menu  ${
-              this.state.showMenu ? " is-active" : ""
-            }`}
+            className={`navbar-menu  ${this.state.showMenu ? ' is-active' : ''}`}
           >
             <div className="navbar-start" />
             <div className="navbar-end">
-              <a className="navbar-item" onClick={() => navigateTo("/rsvp")} >
+              <a className="navbar-item" onClick={() => navigateTo('/rsvp')}>
                 RSVP
               </a>
-              <a className="navbar-item" onClick={() => navigateTo("/contact")}>
+              <a className="navbar-item" onClick={() => navigateTo('/contact')}>
                 Contact
               </a>
 
-              <a className="navbar-item" onClick={() => navigateTo("/venues")}>
+              <a className="navbar-item" onClick={() => navigateTo('/venues')}>
                 Venues
               </a>
-              <a
-                className="navbar-item"
-                onClick={() => navigateTo("/accommodation")}
-              >
+              <a className="navbar-item" onClick={() => navigateTo('/accommodation')}>
                 Accommodation
               </a>
             </div>
