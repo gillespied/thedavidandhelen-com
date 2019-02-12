@@ -66,7 +66,7 @@ export default class RSVP extends React.Component {
                 <form
                   name="contact"
                   method="post"
-                  action="/confirm-rsvp"
+                  action="/rsvp-confirm"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   onSubmit={this.handleSubmit}
@@ -113,7 +113,7 @@ export default class RSVP extends React.Component {
                         name={"name-guest"}
                         onChange={this.handleChange}
                         id={"name-guest"}
-                        required={true}
+                        required={this.state.showGuest}
                       />
                     </div>
                   </div>
