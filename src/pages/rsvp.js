@@ -11,7 +11,8 @@ function encode(data) {
 export default class RSVP extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isValidated: false };
+    this.state = { isValidated: false }
+    this.state = { showGuest: false };
   }
 
   handleChange = e => {
@@ -32,6 +33,12 @@ export default class RSVP extends React.Component {
       .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
   };
+
+  toggleGuest = () => {
+    this.setState({
+      showGuest: !this.state.showGuest
+    });
+  }; 
 
   render() {
     return (
@@ -65,7 +72,7 @@ export default class RSVP extends React.Component {
                 <form
                   name="contact"
                   method="post"
-                  action="/contact/thanks/"
+                  action="/thanks"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   onSubmit={this.handleSubmit}
@@ -89,6 +96,29 @@ export default class RSVP extends React.Component {
                         name={"name"}
                         onChange={this.handleChange}
                         id={"name"}
+                        required={true}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <a 
+                    className="button is-primary"
+                    onClick={this.toggleGuest}
+                    >
+                     Add guest</a>
+                  </div>
+
+                  <div className={`field ${this.state.showGuest ? "": " is-hidden"}`}>
+                    <label className="label" htmlFor={"name-guest"}>
+                      Guest's name
+                    </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type={"text"}
+                        name={"name-guest"}
+                        onChange={this.handleChange}
+                        id={"name-guest"}
                         required={true}
                       />
                     </div>

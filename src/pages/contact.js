@@ -53,7 +53,7 @@
                   <form
                     name="contact"
                     method="post"
-                    action="/page-2"
+                    action="/thanks"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     onSubmit={this.handleSubmit}
