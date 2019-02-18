@@ -25,7 +25,8 @@
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
-    "typography": "^0.16.18"
+    "typography": "^0.16.18",
+    "typography-theme-lincoln": "^0.16.18"
   },
   "keywords": [
     "gatsby"

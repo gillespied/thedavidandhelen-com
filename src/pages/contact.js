@@ -36,89 +36,90 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="container maincontent">
-          <h1 className="title">Contact us</h1>
-          <div className="columns">
-            <div className="column is-one-half">
-              <p>
-                If you need to get in touch with us for any reason, other than to RSVP, the use this
-                form. Or, ring us if you have our number. If you use the form though we can&apos;t
-                forget what you told us. It will also make the time I spent making the form pay-off.
-              </p>
-            </div>
-            <div className="column">
-              <div className="content is-one-half">
-                <form
-                  name="contact"
-                  method="post"
-                  action="/thanks"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  onSubmit={this.handleSubmit}
-                >
-                  {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  <div hidden>
-                    <label className="label" htmlFor="hidden-form-field-do-not-fill">
-                      Do not fill this out:
-                      {' '}
-                      <input name="bot-field" onChange={this.handleChange} />
-                    </label>
-                  </div>
-                  <div className="field">
-                    <label className="label" htmlFor="name">
-                      Your name
-                      <div className="control">
-                        <input
-                          className="input"
-                          type="text"
-                          name="name"
-                          onChange={this.handleChange}
-                          id="name"
-                          required
-                        />
-                      </div>
-                    </label>
-                  </div>
-                  <div className="field">
-                    <label className="label" htmlFor="email">
-                      Email
-                      <div className="control">
-                        <input
-                          className="input"
-                          type="email"
-                          name="email"
-                          onChange={this.handleChange}
-                          id="email"
-                          required
-                        />
-                      </div>
-                    </label>
-                  </div>
-                  <div className="field">
-                    <label className="label" htmlFor="message">
-                      Message
-                      <div className="control">
-                        <textarea
-                          className="textarea"
-                          name="message"
-                          onChange={this.handleChange}
-                          id="message"
-                          required
-                        />
-                      </div>
-                    </label>
-                  </div>
-                  <div className="field">
-                    <button className="button is-primary is-medium" type="submit">
-                      Send
-                    </button>
-                  </div>
-                </form>
+        <div className="section">
+          <div className="container">
+            <h1 className="title">Contact us</h1>
+            <div className="columns">
+              <div className="column is-one-half">
+                <p>
+                  If you need to get in touch with us for any reason, other than to RSVP, please use
+                  this form. Or, if you have our number you could give us a ring.
+                </p>
+              </div>
+              <div className="column">
+                <div className="content is-one-half">
+                  <form
+                    name="contact"
+                    method="post"
+                    action="/thanks"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={this.handleSubmit}
+                  >
+                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div hidden>
+                      <label className="label" htmlFor="hidden-form-field-do-not-fill">
+                        Do not fill this out:
+                        {' '}
+                        <input name="bot-field" onChange={this.handleChange} />
+                      </label>
+                    </div>
+                    <div className="field">
+                      <label className="label" htmlFor="name">
+                        Your name
+                        <div className="control">
+                          <input
+                            className="input"
+                            type="text"
+                            name="name"
+                            onChange={this.handleChange}
+                            id="name"
+                            required
+                          />
+                        </div>
+                      </label>
+                    </div>
+                    <div className="field">
+                      <label className="label" htmlFor="email">
+                        Email
+                        <div className="control">
+                          <input
+                            className="input"
+                            type="email"
+                            name="email"
+                            onChange={this.handleChange}
+                            id="email"
+                            required
+                          />
+                        </div>
+                      </label>
+                    </div>
+                    <div className="field">
+                      <label className="label" htmlFor="message">
+                        Message
+                        <div className="control">
+                          <textarea
+                            className="textarea"
+                            name="message"
+                            onChange={this.handleChange}
+                            id="message"
+                            required
+                          />
+                        </div>
+                      </label>
+                    </div>
+                    <div className="field">
+                      <button className="button is-primary is-medium" type="submit">
+                        Send
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </Layout>
     );
   }
