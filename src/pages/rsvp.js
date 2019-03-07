@@ -177,6 +177,38 @@ export default class RSVP extends React.Component {
                     </div>
                     {' '}
                     {/*  end of field */}
+                    {/*  Bus field */}
+                    <div className="field">
+                      <div className="control">
+                        {/* first radio */}
+                        <label className="label">Bus to Golf Club?</label>
+                        <label className="label" htmlFor="bus">
+                          <input
+                            type="radio"
+                            name="bus"
+                            value="yes"
+                            checked
+                            onChange={this.handleChange}
+                            className="form-check-input"
+                          />
+                          &nbsp;Yes
+                        </label>
+                        <label className="label" htmlFor="bus">
+                          <input
+                            type="radio"
+                            name="bus"
+                            value="no"
+                            onChange={this.handleChange}
+                            className="form-check-input"
+                          />
+                          &nbsp;No
+                        </label>
+                      </div>
+                      {' '}
+                      {/* end of control */}
+                    </div>
+                    {' '}
+                    {/*  end of field */}
                     {/*  */}
                     <div className="field">
                       <label className="label" htmlFor="dietary">
