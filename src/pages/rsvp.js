@@ -53,6 +53,10 @@ export default class RSVP extends React.Component {
                   a plus-one add them with the button.
                 </p>
                 <p>
+                  If you would like a seat on the bus from the ceremony from the golf club, check
+                  the button.
+                </p>
+                <p>
                   Let us know if you have any dietary requirements and we will do our best to make
                   sure they are met.
                 </p>
