@@ -29,8 +29,8 @@ If you&apos;ve
         <div className="columns">
           <div className="column is-6">
             <p className="has-text-justified">
-              David and Helen are getting married! If you are here you are probably invited. Here is
-              the information we promised on the invite.
+              David and Helen are getting married! If you are reading you are probably invited. Here
+              is the information we promised on the invite.
             </p>
             <br />
             <p>
