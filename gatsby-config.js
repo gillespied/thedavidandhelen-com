@@ -20,6 +20,12 @@ module.exports = {
         logo: `${__dirname}/src/images/favicon.png`,
       },
     },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: ['gatsby-remark-responsive-iframe'],
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     {
