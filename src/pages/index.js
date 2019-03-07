@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../components/layout';
-// import Image from "../components/image"
 import SEO from '../components/seo';
 
-const IndexPage = () => (
+const IndexPage = props => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
     <section className="hero is-medium has-text-centered is-primary">
@@ -71,15 +72,13 @@ If you&apos;ve
             <p>David and Helen.</p>
           </div>
           <div className="column is-6">
-            <p className="has-text-justified">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+            <div className="box">
+              <Img fluid={props.data.engage.childImageSharp.fluid} />
+              <p className="has-text-justified">
+                This is us, by the way, in case you know more than one couple called David and
+                Helen.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -88,3 +87,15 @@ If you&apos;ve
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    engage: file(relativePath: { eq: "engagement.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
