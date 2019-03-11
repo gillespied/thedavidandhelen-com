@@ -14,12 +14,49 @@ const Venues = () => (
             <div className="column is-6">
               <h1 className="title">The Ceremony</h1>
               <h1 className="subtitle">Chester Town Hall.</h1>
-              <p>33 Northgate Street</p>
-              <p>Chester</p>
-              <p>CH1 2HQ</p>
-              <p>01244 304660</p>
-              <br />
-              <p>If you are driving to the ceremony, CARPARK, is best.</p>
+              <div className="content">
+                <p>33 Northgate Street</p>
+                <p>Chester</p>
+                <p>CH1 2HQ</p>
+                <p>01244 304660</p>
+                <br />
+                <p>
+                  According to those in the know, Helen’s parents, the best car park is probably at
+                  <a href="https://goo.gl/maps/2UN8zHTUYLD2"> Linenhall St Car Park CH1 2LP</a>
+.
+                  Access is from Nicholas Street. If using a Sat nav it may take you round the back
+                  where there is no entrance.
+                </p>
+                <br />
+                <p>There are also car parks at:</p>
+                <ul>
+                  <li>
+                    <strong>Chester Racecourse</strong>
+                    {' '}
+- CH1 2LY
+                  </li>
+                  <li>
+                    <strong>Watergate Street</strong>
+                    {' '}
+- CH1 4JE
+                  </li>
+                  <li>
+                    <strong>Delamere Street</strong>
+                    {' '}
+- CH2 2AY
+                  </li>
+                  <li>
+                    <strong>Chester Market</strong>
+                    {' '}
+- CH1 2HS (not 24 hour)
+                  </li>
+                </ul>
+                <br />
+                <p>
+                  Again quoting the 'rents, “Car parks are not cheap in Chester! If you are talking
+                  all day the Linenhall one is probably best at £5 a day.”
+                </p>
+              </div>
             </div>
             <div className="column is-6">
               <iframe
