@@ -52,14 +52,17 @@ export default class RSVP extends React.Component {
                   Please fill in this form to confirm whether or not you can attend. If we gave you
                   a plus-one add them with the button.
                 </p>
+                <br />
                 <p>
                   If you would like a seat on the bus from the ceremony from the golf club, check
                   the button.
                 </p>
+                <br />
                 <p>
                   Let us know if you have any dietary requirements and we will do our best to make
                   sure they are met.
                 </p>
+                <br />
                 <p>We promise not to spam your email or phone number if you give them to us.</p>
               </div>
               <div className="column">
