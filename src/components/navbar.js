@@ -59,6 +59,12 @@ class Navbar extends React.Component {
               <a className="navbar-item" onClick={() => navigateTo('/accommodation')}>
                 Accommodation
               </a>
+              <a className="navbar-item" onClick={() => navigateTo('/taxi')}>
+                Taxis
+              </a>
+              <a className="navbar-item" onClick={() => navigateTo('/gifts')}>
+                Gifts
+              </a>
             </div>
           </div>
         </div>
