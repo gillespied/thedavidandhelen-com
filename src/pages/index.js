@@ -37,20 +37,19 @@ If you already
               It is all taking place on Saturday 3rd August 2019. The ceremony will be in Chester
               Town Hall, it starts at 12.00pm, that&apos;s noon. Please arrive promptly. Helen is
               paranoid about being late for anything, so I expect this day to be no different. If
-              you are driving and need help with parking,
+              you are driving click for
               {' '}
-              <Link to="venues">click here</Link>
-.
+              <Link to="venues">help with parking.</Link>
             </p>
             <br />
             <p className="has-text-justified">
               After the ceremony we will be hanging around the town hall for a short time while we
-              have some photographs taken. Hopefully this won’t take too long, but there will be
-              some drinks on offer to keep you all placated. Once the photographs are done, it’s on
-              to the wedding breakfast at Eaton Golf Club. We have a bus to transport you there. Due
-              to a pricing error at Morrisons we also have drinks. If you’d prefer to drive to the
-              golf club there is plenty of parking at the golf club. You’d be helping us out as the
-              bus isn't quite big enough for everyone.
+              have some photographs taken. Hopefully this won&apos;t take too long, but there will
+              be some drinks on offer to keep you all placated. Once the photographs are done, it’s
+              on to the wedding breakfast at Eaton Golf Club. We have a bus to transport you there.
+              Due to a pricing error at Morrisons we also have drinks. If you’d prefer to drive to
+              the golf club there is plenty of parking at the golf club. You’d be helping us out as
+              the bus isn't quite big enough for everyone.
               {' '}
             </p>
             <br />
