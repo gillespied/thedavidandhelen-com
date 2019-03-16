@@ -18,8 +18,8 @@ const IndexPage = props => (
             {' '}
             <Link to="/rsvp">RSVP.</Link>
             {' '}
-If you&apos;ve
-            already have, thanks!
+If you already
+            have, thanks!
           </h2>
         </div>
       </div>
@@ -34,9 +34,10 @@ If you&apos;ve
             </p>
             <br />
             <p className="has-text-justified">
-              The ceremony is taking place at Chester Town Hall, it starts at 12.00pm, that’s noon.
-              Please arrive promptly. Helen is paranoid about being late for anything, so I expect
-              this day to be no different. If you are driving and need help with parking,
+              It is all taking place on Saturday 3rd August 2019. The ceremony will be in Chester
+              Town Hall, it starts at 12.00pm, that&apos;s noon. Please arrive promptly. Helen is
+              paranoid about being late for anything, so I expect this day to be no different. If
+              you are driving and need help with parking,
               {' '}
               <Link to="venues">click here</Link>
 .
