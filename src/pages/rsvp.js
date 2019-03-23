@@ -162,7 +162,6 @@ export default class RSVP extends React.Component {
                             type="radio"
                             name="attending"
                             value="yes"
-                            checked
                             onChange={this.handleChange}
                             className="form-check-input"
                           />
@@ -194,7 +193,6 @@ export default class RSVP extends React.Component {
                             type="radio"
                             name="bus"
                             value="yes"
-                            checked
                             onChange={this.handleChange}
                             className="form-check-input"
                           />
