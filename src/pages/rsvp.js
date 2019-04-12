@@ -64,6 +64,13 @@ export default class RSVP extends React.Component {
                 </p>
                 <br />
                 <p>We promise not to spam your email or phone number if you give them to us.</p>
+                <br />
+                <p>
+                  If the submit button seems to be broken, please another browser that isn&apos;t 
+                  Internet explorer. There is a bug and if Microsoft can&apos;t fix it I stand no
+                  chance. If you don&apos;t have access to another browser give one of us a ring 
+                  and we&apos;ll fill it in for you.
+                </p>
               </div>
               <div className="column">
                 <div className="content is-one-half">
